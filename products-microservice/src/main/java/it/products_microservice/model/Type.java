@@ -10,6 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Data
@@ -20,6 +21,9 @@ public class Type {
     private Long id;
 
     private String name;
+
+    @ManyToMany(mappedBy = "types")
+    private Set<Product> products;
 
     @CreationTimestamp
     @Column(name = "creatrionDate", updatable = false)

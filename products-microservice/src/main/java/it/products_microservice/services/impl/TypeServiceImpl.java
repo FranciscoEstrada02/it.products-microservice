@@ -4,10 +4,12 @@ import it.products_microservice.model.Type;
 import it.products_microservice.repositories.TypeRepository;
 import it.products_microservice.services.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class TypeServiceImpl implements TypeService {
 
     @Autowired
